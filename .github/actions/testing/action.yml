@@ -2,7 +2,8 @@ name: "Test action"
 
 runs:
   using: "composite"
+
   steps:
     - name: Test
       shell: "bash"
-      run: echo Env is: ${{ env.TEST }}
+      run: "echo Env is: ${{ env.TEST }}"
