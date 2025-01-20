@@ -1,0 +1,15 @@
+name: Test
+
+on:
+  workflow_dispatch: # Add manual trigger
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - id: test
+        env:
+          TEST: testing
+        uses: ./.github/actions/testing
